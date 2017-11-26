@@ -7,6 +7,8 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.GridLayout;
 import java.awt.Component;
+import java.awt.EventQueue;
+
 import javax.swing.Box;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
@@ -33,18 +35,18 @@ public class MemoryFrame extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	//	public static void main(String[] args) {
-	//		EventQueue.invokeLater(new Runnable() {
-	//			public void run() {
-	//				try {
-	//					MemoryFrame frame = new MemoryFrame();
-	//					frame.setVisible(true);
-	//				} catch (Exception e) {
-	//					e.printStackTrace();
-	//				}
-	//			}
-	//		});
-	//	}
+		public static void main(String[] args) {
+			EventQueue.invokeLater(new Runnable() {
+			public void run() {
+					try {
+						MemoryFrame frame = new MemoryFrame();
+						frame.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
+		}
 
 	/**
 	 * Create the frame.
@@ -294,4 +296,5 @@ public class MemoryFrame extends JFrame {
 	{
 		if (DEBUG) System.out.println( message );
 	}
+	
 }
